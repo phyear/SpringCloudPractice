@@ -1,0 +1,25 @@
+server:
+     port: 2008
+
+
+
+spring:
+   application:
+        name: config-server
+   cloud:
+       config:
+           server:
+               git:
+                   uri: https://github.com/phyear/springcloud-config.git
+
+
+
+eureka:
+    client:
+        service-url:
+            defaultZone: http://localhost:2001/eureka/
+    instance:
+        appname: config-server
+
+
+
